@@ -85,17 +85,6 @@ backend/    Spring Boot 3 (Java 21) — layered: controller -> service -> reposi
 3. `POST /api/chat/reindex` refreshes the index; the frontend calls it
    automatically after a CSV import.
 
-<p align="center">
-  <img src="docs/screenshots/landing.png" width="800" alt="Landing page">
-</p>
-<p align="center">
-  <img src="docs/screenshots/dashboard-dark.png" width="390" alt="Dashboard, dark mode">
-  <img src="docs/screenshots/dashboard-light.png" width="390" alt="Dashboard, light mode">
-</p>
-<p align="center">
-  <img src="docs/screenshots/investments.png" width="800" alt="Investments page">
-</p>
-
 ## Running it locally
 
 ### 1. Database
@@ -134,3 +123,14 @@ Visit `http://localhost:3000` — sign up, then head to the dashboard.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+<p align="center">
+  <img src="docs/screenshots/landing.png" width="800" alt="Landing page">
+</p>
+<p align="center">
+  <img src="docs/screenshots/dashboard-dark.png" width="390" alt="Dashboard, dark mode">
+  <img src="docs/screenshots/dashboard-light.png" width="390" alt="Dashboard, light mode">
+</p>
+<p align="center">
+  <img src="docs/screenshots/investments.png" width="800" alt="Investments page">
+</p>
