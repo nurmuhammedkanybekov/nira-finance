@@ -1,0 +1,15 @@
+services:
+  db:
+    image: ankane/pgvector:latest
+    container_name: nira-finance-db
+    environment:
+      POSTGRES_USER: nira
+      POSTGRES_PASSWORD: nira
+      POSTGRES_DB: nira_finance
+    ports:
+      - "5432:5432"
+    volumes:
+      - nira_db_data:/var/lib/postgresql/data
+
+volumes:
+  nira_db_data:

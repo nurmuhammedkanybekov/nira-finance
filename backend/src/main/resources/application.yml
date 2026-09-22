@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: nira-finance
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nira_finance
+    username: nira
+    password: nira
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+server:
+  port: 8080
+
+nira:
+  jwt:
+    secret: ${JWT_SECRET:change-this-to-a-long-random-string-in-prod}
+    expiration-minutes: 1440
+  ai:
+    # Set the API key via env var; never commit real keys.
+    provider-api-key: ${AI_PROVIDER_API_KEY:}
+    model: claude-sonnet-5
+    max-context-transactions: 200
+
+logging:
+  level:
+    com.nira.finance: INFO
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
