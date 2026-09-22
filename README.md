@@ -1,23 +1,12 @@
 # Nira Finance
 
-A personal finance tracker — accounts, transactions, CSV import, budgets, and
+A personal finance tracker. Accounts, transactions, CSV import, budgets, and
 manual investment/portfolio tracking, plus an AI chat assistant ("Ask your
 finances") that answers questions about your own money using retrieval-augmented
 generation (RAG) over your real transaction history.
 
 Built as a portfolio project: **Spring Boot 3 (Java 21)** backend, **Next.js 14**
 (App Router) frontend, **Postgres + pgvector** for the RAG index, JWT auth.
-
-<p align="center">
-  <img src="docs/screenshots/landing.png" width="800" alt="Landing page">
-</p>
-<p align="center">
-  <img src="docs/screenshots/dashboard-dark.png" width="390" alt="Dashboard, dark mode">
-  <img src="docs/screenshots/dashboard-light.png" width="390" alt="Dashboard, light mode">
-</p>
-<p align="center">
-  <img src="docs/screenshots/investments.png" width="800" alt="Investments page">
-</p>
 
 ## Features
 
@@ -96,6 +85,17 @@ backend/    Spring Boot 3 (Java 21) — layered: controller -> service -> reposi
 3. `POST /api/chat/reindex` refreshes the index; the frontend calls it
    automatically after a CSV import.
 
+<p align="center">
+  <img src="docs/screenshots/landing.png" width="800" alt="Landing page">
+</p>
+<p align="center">
+  <img src="docs/screenshots/dashboard-dark.png" width="390" alt="Dashboard, dark mode">
+  <img src="docs/screenshots/dashboard-light.png" width="390" alt="Dashboard, light mode">
+</p>
+<p align="center">
+  <img src="docs/screenshots/investments.png" width="800" alt="Investments page">
+</p>
+
 ## Running it locally
 
 ### 1. Database
@@ -130,11 +130,6 @@ Visit `http://localhost:3000` — sign up, then head to the dashboard.
 - [x] Per-resource ownership checks on every mutating endpoint
 - [x] Light/dark mode design system
 - [x] Tests: JWT round-trip, rule-based categorization, budget-vs-spend math
-- [ ] Real embeddings provider (Voyage AI / OpenAI) instead of the hashed placeholder
-- [ ] Live price lookups for `Holding` valuations (currently manual entry by design)
-- [ ] Recurring-transaction detection
-- [ ] Test coverage for CSV import edge cases and the RAG pipeline itself
-- [ ] Dockerize the backend/frontend too, so `docker compose up` runs everything
 
 ## License
 
