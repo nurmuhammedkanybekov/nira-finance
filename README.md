@@ -111,7 +111,7 @@ npm run dev
 
 Visit `http://localhost:3000` — sign up, then head to the dashboard.
 
-## Roadmap / good next additions
+## Roadmap
 - [x] Signup/login UI, budgets UI, investments UI
 - [x] Docker Compose for the database
 - [x] Global exception handling (consistent error JSON, no leaked stack traces or bare 500s)
